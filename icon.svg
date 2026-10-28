@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070B12"/>
+      <stop offset="50%" stop-color="#0D1624"/>
+      <stop offset="100%" stop-color="#05080D"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00FF87"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+  <rect x="16" y="16" width="480" height="480" rx="94" fill="none" stroke="url(#neon)" stroke-width="6" stroke-opacity="0.6"/>
+  <polygon points="256,56 426,136 392,380 256,456 120,380 86,136" fill="#0B1320" stroke="url(#neon)" stroke-width="8"/>
+  <polygon points="256,82 396,148 368,360 256,424 144,360 116,148" fill="none" stroke="url(#gold)" stroke-width="3" stroke-dasharray="10,6" opacity="0.7"/>
+  <text x="256" y="232" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="96" fill="#F8FAFC" letter-spacing="-3">FC27</text>
+  <rect x="140" y="258" width="232" height="46" rx="12" fill="url(#neon)"/>
+  <text x="256" y="290" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="28" fill="#060A0F" letter-spacing="3">CLUBS LAB</text>
+  <text x="256" y="356" text-anchor="middle" font-family="monospace" font-weight="700" font-size="24" fill="#FFD166" letter-spacing="2">S2 · LVL 55</text>
+</svg>

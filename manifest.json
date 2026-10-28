@@ -1,0 +1,32 @@
+{
+  "name": "FC 27 CLUBS LAB // Season 2 Build Scanner & AP Optimizer",
+  "short_name": "FC27 Lab",
+  "description": "Mobile-first EA Sports FC 27 Pro Clubs Photo Build Scanner, Level 1-55 AP Optimizer, PlayStyle & Specialization Radar, S2 Evolutions and FC IQ tactics.",
+  "id": "./index.html",
+  "start_url": "./index.html#tab=planner",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#06090F",
+  "theme_color": "#06090F",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
