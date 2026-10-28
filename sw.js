@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fc27-clubs-lab-s2-v2';
+const CACHE_NAME = 'fc27-clubs-lab-s2-v3';
 const ASSETS = ["./", "./index.html", "./manifest.json", "./icon.svg", "./icon-512.png", "./icon-192.png", "./apple-touch-icon.png"];
 
 self.addEventListener('install', (e) => {

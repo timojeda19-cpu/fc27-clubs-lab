@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>FC 27 Clubs Lab · Season 2 Build Planner</title>
-<meta name="description" content="Offline EA Sports FC 27 Pro Clubs Season 2 build planner: Level 1-55 AP planner, 13 archetypes, 36 PlayStyles, 39 Specializations, S2 Evolutions and FC IQ meta tactics.">
+<title>FC 27 Clubs Lab · Season 2 Build Planner &amp; Photo Auto-Builder</title>
+<meta name="description" content="Offline EA Sports FC 27 Pro Clubs Season 2 build planner: Snap &amp; Auto-Build photo scanner, PlayStyle-first auto-builder, Level 1-55 AP planner, 13 archetypes, 36 PlayStyles, 39 Specializations, S2 Evolutions and FC IQ meta tactics.">
 <meta name="theme-color" content="#06090F">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -230,10 +230,45 @@ details.more>summary::-webkit-details-marker{display:none}
 @media (max-width:899px){ .planner .colA,.planner .colB,.planner .colC{display:grid;gap:12px} }
 @media (max-width:380px){ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))} }
 .mast{display:flex;gap:10px;align-items:flex-start;margin-top:12px;cursor:pointer}.mast input{flex:0 0 auto;width:20px;height:20px;accent-color:var(--neon);margin:1px 0 0}
+/* ---------- Snap & PlayStyle Auto-Builder ---------- */
+.top-cta{margin-left:auto;margin-right:6px;white-space:nowrap;box-shadow:0 0 14px rgba(0,255,135,.28)}
+.top .ver{margin-left:0}
+@media (max-width:430px){.top .ver{display:none}.top-cta{margin-right:0}}
+.modebar{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--bg2);border:1px solid var(--line2);border-radius:14px;padding:5px;margin-bottom:12px}
+.mbtn{border:1px solid transparent;background:transparent;border-radius:10px;padding:10px 12px;font-weight:800;font-size:13.5px;color:var(--tx2);transition:.15s;text-align:center}
+.mbtn.on{background:linear-gradient(135deg,rgba(0,255,135,.18),rgba(34,211,238,.12));border-color:var(--neon);color:var(--tx);box-shadow:0 0 12px rgba(0,255,135,.16)}
+.ab-wrap{margin-bottom:14px}
+.ab-wrap.hide{display:none}
+.ab-topgrid{align-items:start}
+.ab-card{border-color:rgba(0,255,135,.32);background:linear-gradient(180deg,#132136,#0D1524)}
+.ab-preview{margin-top:10px;border:1px solid var(--line2);border-radius:12px;background:#050911;padding:10px}
+.ab-imgwrap{position:relative;overflow:auto;max-height:240px;border-radius:10px;border:1px solid var(--line);background:#020408;text-align:center}
+.ab-imgwrap img{display:block;max-width:100%;height:auto;margin:0 auto;transform-origin:top center;transition:transform .15s}
+.ab-confirm{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(6,10,18,.75);border:1px solid rgba(34,211,238,.35)}
+.ab-confirm-grid{align-items:end}
+.ab-ps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(142px,1fr));gap:6px;max-height:250px;overflow-y:auto;padding-right:2px}
+.pspick{text-align:left;border:1px solid var(--line2);background:var(--bg2);border-radius:11px;padding:7px 9px;display:flex;flex-direction:column;gap:2px;transition:.12s}
+.pspick b{font-size:12.5px;display:flex;align-items:center;justify-content:space-between;gap:4px}
+.pspick small{font-size:10.5px;color:var(--tx3);font-weight:700}
+.pspick.on{border-color:var(--neon);background:rgba(0,255,135,.12);box-shadow:0 0 0 1px var(--neon) inset}
+.pspick.on b{color:var(--neon)}
+.ab-results-card{border-color:rgba(34,211,238,.4)}
+.rkcard{text-align:left;border:1px solid var(--line2);background:var(--bg2);border-radius:13px;padding:11px 12px;cursor:pointer;transition:.15s;display:flex;flex-direction:column;gap:5px}
+.rkcard.on{border-color:var(--neon);background:linear-gradient(160deg,rgba(0,255,135,.13),rgba(15,23,36,.95));box-shadow:0 0 0 1px var(--neon) inset}
+.rkcard .rkhd{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.rkcard .rkhd b{font-size:15px}
+.solgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+@media (min-width:900px){.solgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.solbox{border:1px solid var(--line);background:var(--bg2);border-radius:12px;padding:11px 12px}
+.solbox h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--gold);margin:0 0 8px;display:flex;align-items:center;gap:6px}
+.statpills{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:6px}
+.statpill{background:#080E18;border:1px solid var(--line);border-radius:9px;padding:6px 8px;display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.statpill b{font-size:14px}
+.statpill i{font-style:normal;font-size:11px;color:var(--neon);font-weight:800;margin-left:3px}
 </style>
 </head>
 <body>
-<header class="top"><img src="icon.svg" alt=""><div class="brand"><b>FC27 <i>CLUBS LAB</i></b><span id="k-db"></span></div><span class="ver"><span class="off"></span><span id="net">Offline-ready</span></span></header>
+<header class="top"><img src="icon.svg" alt=""><div class="brand"><b>FC27 <i>CLUBS LAB</i></b><span id="k-db"></span></div><button class="btn s p top-cta" id="top-autobuild" type="button">📸 Snap / Auto-Build</button><span class="ver"><span class="off"></span><span id="net">Offline-ready</span></span></header>
 <nav class="tabs" aria-label="Sections">
  <a href="#tab=planner" data-t="planner"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Planner</a>
  <a href="#tab=archetypes" data-t="archetypes"><svg viewBox="0 0 24 24"><path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/><path d="M12 8v8M8 10l8 4M16 10l-8 4"/></svg>Archetypes</a>
@@ -244,7 +279,73 @@ details.more>summary::-webkit-details-marker{display:none}
 <main>
 <!-- PLANNER -->
 <section class="view" id="v-planner">
- <div class="vh"><h1>Build Planner</h1><p>Level 1–55 (1,419 AP) planner with the Season 2 AP cost tiers, live PlayStyle and Specialization unlocks, and a photo-scan cheatsheet.</p></div>
+ <div class="vh"><h1>Build Planner &amp; Photo Auto-Builder</h1><p>Snap your TV build screen or pick the PlayStyles you want — the Season 2 solver builds your exact Lv 1–55 (1,419 AP) setup automatically.</p></div>
+ <div class="modebar" id="pm-bar" role="tablist" aria-label="Planner Mode">
+  <button class="mbtn on" data-pm="auto" type="button">✨ Easy Auto-Builder &amp; Photo Scan</button>
+  <button class="mbtn" data-pm="manual" type="button">🎛️ Manual Attribute Sliders</button>
+ </div>
+
+ <!-- SNAP & PLAYSTYLE AUTO-BUILDER HERO WIZARD -->
+ <div id="ab-wrap" class="ab-wrap">
+  <div class="grid g2 ab-topgrid">
+   <!-- WORKFLOW 1: PHOTO SCANNER -->
+   <div class="card ab-card">
+    <h2>1 · 📸 Snap or Upload Your TV Build Screen <span class="n" id="ab-scan-status">Offline OCR + Quick-Confirm</span></h2>
+    <p class="small muted" style="margin:0 0 10px">Take a photo of your PS5/Xbox/PC Pro Clubs screen or upload a screenshot. We’ll scan it and let you confirm Position, Archetype &amp; Level right next to your photo.</p>
+    <input type="file" id="ab-file" accept="image/*" hidden>
+    <input type="file" id="ab-file-cam" accept="image/*" capture="environment" hidden>
+    <div class="row">
+     <label for="ab-file" class="btn p" style="cursor:pointer;flex:1">📸 Take Photo / Upload Screenshot</label>
+     <label for="ab-file-cam" class="btn s" style="cursor:pointer">📷 Camera</label>
+     <button class="btn s" id="ab-demo-photo" type="button">🧪 Demo TV Photo</button>
+    </div>
+    <div id="ab-preview-box" class="ab-preview empty-hide"></div>
+    <div class="ab-confirm">
+     <div class="small" style="font-weight:800;color:var(--neon);margin-bottom:6px">⚡ 1-Tap Quick-Confirm Bar <span class="dim" id="ab-detect-note">(synced with Auto-Builder)</span></div>
+     <div class="grid g3 ab-confirm-grid">
+      <div><label class="f" for="ab-pos">Position</label><select id="ab-pos"></select></div>
+      <div><label class="f" for="ab-lvl">Current Level <span id="ab-lvl-lbl" class="dim"></span></label><input type="range" id="ab-lvl" min="1" max="55" step="1" value="55"></div>
+      <div><label class="f" for="ab-arch-pref">Archetype Filter</label><select id="ab-arch-pref"></select></div>
+     </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+     <button class="btn s" id="ab-grok-btn" type="button">💬 Send Photo to FC 27 Bot in Grok (Copy Prompt)</button>
+     <span class="small dim" id="ab-ocr-msg"></span>
+    </div>
+   </div>
+
+   <!-- WORKFLOW 2: PICK THE PLAYSTYLES YOU WANT -->
+   <div class="card ab-card">
+    <h2>2 · 🎯 Pick the PlayStyles You Want <span class="n" id="ab-ps-counter">0 / 4 selected</span></h2>
+    <p class="small muted" style="margin:0 0 8px">Tap up to <b>4 PlayStyles</b> you want on your build (plus an optional Specialization PS+). The engine checks all 13 Archetypes, finds free Signature PlayStyle+ overlaps, and calculates the exact Season 2 AP math.</p>
+    <div class="row" style="margin-bottom:8px">
+     <button class="btn s p" id="ab-meta-fill" type="button">✨ Auto-Pick Best Meta PlayStyles for Position</button>
+     <button class="btn s" id="ab-ps-clear" type="button">Clear</button>
+    </div>
+    <div class="chips" id="ab-cat-tabs" style="margin-bottom:8px"></div>
+    <div class="ab-ps-grid" id="ab-ps-picker"></div>
+    <div style="margin-top:10px">
+     <label class="f" for="ab-spec-pick">Target Specialization PlayStyle+ (92 / 90 / 90)</label>
+     <select id="ab-spec-pick"></select>
+    </div>
+   </div>
+  </div>
+
+  <!-- STEP C & D: SOLVER RESULTS & 4-PART ACTION PLAN -->
+  <div class="card ab-results-card" style="margin-top:12px">
+   <div class="row" style="margin-bottom:10px">
+    <h2 style="margin:0">3 · ⚡ Your Auto-Generated Build &amp; Top 3 Archetype Matches</h2>
+    <span class="sp"></span>
+    <button class="btn p" id="ab-apply-top" type="button">⚡ Load This Build Into Planner</button>
+    <button class="btn s" id="ab-copy-plan" type="button">📋 Copy Action Plan</button>
+   </div>
+   <div class="grid g3" id="ab-ranks" style="margin-bottom:12px"></div>
+   <div id="ab-solution"></div>
+  </div>
+ </div>
+
+ <!-- MANUAL PLANNER -->
+ <div id="man-wrap">
  <div class="card" style="margin-bottom:12px"><h2>Lv 55 meta presets <span class="n">auto-built from DB weights · tap to load</span></h2><div class="scrollx" id="presets"></div></div>
  <div class="grid planner">
   <div class="colA">
@@ -279,6 +380,7 @@ details.more>summary::-webkit-details-marker{display:none}
    <div class="card"><h2>Share build</h2><div class="row"><button class="btn p" id="b-share">Share</button><button class="btn" id="b-link">Copy link</button><button class="btn" id="b-card">Copy build card</button></div><div class="bcard" id="bcard" style="margin-top:10px"></div></div>
   </div>
  </div>
+ </div>
 </section>
 <!-- ARCHETYPES -->
 <section class="view" id="v-archetypes">
@@ -291,7 +393,7 @@ details.more>summary::-webkit-details-marker{display:none}
  <div class="vh"><h1>PlayStyles &amp; Specializations</h1><p>Search all 36 PlayStyles (75 / 80 / 85 thresholds) and all 39 Specializations (92 / 90 / 90).</p></div>
  <div class="card" style="margin-bottom:12px"><div class="chips" id="ex-mode"><button class="chip on" data-m="ps">36 PlayStyles</button><button class="chip" data-m="spec">39 Specializations</button></div>
   <input type="search" id="ex-q" placeholder="Search name, effect or attribute (e.g. finesse, composure)" style="margin-top:10px" aria-label="Search">
-  <div class="chips" id="ex-cat" style="margin-top:10px"></div><div class="small dim" id="ex-n" style="margin-top:8px"></div></div>
+  <div class="chips" id="ex-cat" style="margin-top:10px"></div><div class="small dim" style="margin-top:8px"></div></div>
  <div class="pslist wide" id="ex-list"></div>
 </section>
 <!-- EVOLUTIONS -->
@@ -413,7 +515,7 @@ function shareURL() { const base = location.href.split("#")[0]; return `${base}#
 
 /* ===== routing ===== */
 const TABS = ["planner", "archetypes", "explorer", "evolutions", "tactics"];
-function parseHash() { const h = new URLSearchParams(location.hash.replace(/^#/, "")); return { tab: TABS.includes(h.get("tab")) ? h.get("tab") : "planner", b: h.get("b"), arch: h.get("arch"), f: h.get("f"), q: h.get("q"), mode: h.get("mode"), evo: h.get("evo") }; }
+function parseHash() { const h = new URLSearchParams(location.hash.replace(/^#/, "")); return { tab: TABS.includes(h.get("tab")) ? h.get("tab") : "planner", b: h.get("b"), arch: h.get("arch"), f: h.get("f"), q: h.get("q"), mode: h.get("mode"), evo: h.get("evo"), pm: h.get("pm") }; }
 function show(tab) {
   $$(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + tab));
   $$("nav.tabs a").forEach(a => a.classList.toggle("on", a.dataset.t === tab));
@@ -422,7 +524,8 @@ function show(tab) {
 function route() {
   const r = parseHash();
   if (r.b) { const st = decode(r.b); if (st) { S = st; save(); renderPlanner(true); } }
-  if (r.tab === "planner" && r.arch && ARCH[r.arch] && !r.b) { S = fresh(r.arch); renderPlanner(true); }
+  if (r.tab === "planner" && r.arch && ARCH[r.arch] && !r.b) { S = fresh(r.arch); AB.archPref = r.arch; AB.pos = S.pos; renderPlanner(true); renderAutoBuilder(); }
+  if (r.pm) setPlannerMode(r.pm, false);
   if (r.tab === "explorer") { if (r.mode) EX.mode = r.mode === "spec" ? "spec" : "ps"; if (r.q != null) EX.q = r.q; renderExplorer(true); }
   if (r.tab === "tactics" && r.f && META.tactics.some(t => t.id === r.f)) { TAC.f = r.f; TAC.sel = null; renderTactics(); }
   show(r.tab);
@@ -626,6 +729,716 @@ function bindPlanner() {
   $("#b-share").addEventListener("click", async () => { const url = shareURL(); if (navigator.share) { try { await navigator.share({ title: "FC 27 Clubs Lab build", text: buildCard(PSL.map(p => ({ p, r: reqStatus(p.r) }))).split("\n\n")[0], url }); } catch (e) { } } else copy(url, "Share not supported here: link copied"); });
 }
 
+
+/* ===== SNAP & PLAYSTYLE AUTO-BUILDER ===== */
+const AB = {
+  mode: "auto",
+  pos: "ST",
+  lvl: 55,
+  archPref: "auto",
+  cat: "All",
+  ps: ["finesse-shot", "quick-step", "rapid", "technical"],
+  specTarget: "auto",
+  rankIdx: 0,
+  photoUrl: null,
+  photoName: "",
+  zoom: 1,
+  detectedNote: "",
+  scannedStats: {},
+  solutions: []
+};
+
+function metaPsForPos(pos) {
+  const list = DB.positions[pos]?.bestRegularPlayStyles || [];
+  const slugs = list.map(n => PSN[norm(n)]?.s).filter(Boolean);
+  return slugs.slice(0, 4);
+}
+
+function findLevelForAp(targetAp) {
+  for (const l of DB.levels) {
+    if (l.totalAp >= targetAp) return l.level;
+  }
+  return null;
+}
+
+function posMatchScore(a, pos) {
+  if (isGKArch(a) !== (pos === "GK")) return -1200;
+  for (const bp of a.bestPositions) {
+    if (bp === pos) return 310;
+    if (bp === "RM/LM" && (pos === "LW/RW" || pos === "CM" || pos === "CAM")) return 185;
+    if (bp === "RWB/LWB" && (pos === "LB/RB" || pos === "CDM")) return 185;
+  }
+  const grpMap = { ST: "Forward", "LW/RW": "Forward", CAM: "Midfielder", CM: "Midfielder", CDM: "Midfielder", "LB/RB": "Defender", CB: "Defender", GK: "Goalkeeper" };
+  return a.group === grpMap[pos] ? 95 : 15;
+}
+
+function masteryMapFor(a, lvl, useMast) {
+  if (!useMast) return {};
+  const mp = DB.levels[lvl - 1].masteryPoints;
+  const keys = a.mastery.map(m => NAME2KEY[m.replace(/\s*\(.*$/, "")]);
+  const add = [0, 0];
+  if (mp >= 1) { add[0]++; add[1]++; }
+  if (mp >= 2) add[1]++;
+  if (mp >= 3) add[0]++;
+  return { [keys[0]]: add[0], [keys[1]]: add[1] };
+}
+
+function solveArchetypeBuild(a, pos, lvl, wantedSlugs, specTarget, archPref) {
+  const L = DB.levels[lvl - 1];
+  const budget = L.totalAp;
+  const A = a.attributes;
+  const useMast = S ? S.mast : true;
+  const mast = masteryMapFor(a, lvl, useMast);
+  const vals = {};
+  for (const [k, o] of Object.entries(A)) vals[k] = o.start;
+  const effV = k => A[k] ? Math.min(99, vals[k] + (mast[k] || 0)) : 0;
+  const spentNow = () => Object.keys(A).reduce((sum, k) => sum + apTo(A[k].tier, A[k].start, vals[k]), 0);
+
+  const costReqs = reqs => {
+    let c = 0;
+    for (const [k, thr] of reqs) {
+      if (!A[k]) return Infinity;
+      const targetRaw = thr - (mast[k] || 0);
+      if (targetRaw > A[k].max) return Infinity;
+      if (targetRaw > vals[k]) c += apTo(A[k].tier, vals[k], targetRaw);
+    }
+    return c;
+  };
+  const applyReqs = reqs => {
+    for (const [k, thr] of reqs) {
+      const targetRaw = Math.max(vals[k], thr - (mast[k] || 0));
+      vals[k] = Math.min(A[k].max, targetRaw);
+    }
+  };
+
+  const sigIds = [a.sig1.id, a.sig2.id];
+  const freeSigs = wantedSlugs.filter(slug => sigIds.includes(slug));
+  const remWanted = wantedSlugs.filter(slug => !sigIds.includes(slug));
+
+  // Evaluate candidate specializations on this archetype
+  const specCands = a.specializations.map(sp => {
+    const cBase = costReqs(sp.reqs);
+    const matchesTarget = specTarget !== "auto" && (sp.name === specTarget || norm(sp.psPlus) === norm(specTarget));
+    const matchesWanted = wantedSlugs.some(slug => PSB[slug] && norm(PSB[slug].n) === norm(sp.psPlus));
+    return { sp, cBase, matchesTarget, matchesWanted, priority: (matchesTarget ? 500 : 0) + (matchesWanted ? 220 : 0) - (cBase < Infinity ? cBase * 0.25 : 9999) };
+  }).sort((x, y) => y.priority - x.priority);
+
+  const chosenSpec = specCands[0]?.sp || a.specializations[0];
+  const unlockedWanted = [...freeSigs];
+  const unlockedRegular = [];
+  const capBlocked = [];
+  const nextMilestones = [];
+
+  // Check cap feasibility for wanted PlayStyles
+  const feasibleWanted = [];
+  for (const slug of remWanted) {
+    const p = PSB[slug];
+    if (!p) continue;
+    const c = costReqs(p.r);
+    if (c === Infinity) capBlocked.push(p);
+    else feasibleWanted.push(p);
+  }
+
+  // If user explicitly chose a specialization that exists on this archetype and fits budget, buy it first when lvl >= 35
+  let specUnlocked = null;
+  if (specTarget !== "auto" && specCands[0]?.matchesTarget) {
+    const sc = costReqs(chosenSpec.reqs);
+    if (sc < Infinity && spentNow() + sc <= budget) {
+      applyReqs(chosenSpec.reqs);
+      specUnlocked = chosenSpec;
+    }
+  }
+
+  // Greedily unlock wanted PlayStyles in order of lowest incremental AP cost
+  const poolWanted = feasibleWanted.slice();
+  while (poolWanted.length) {
+    poolWanted.sort((x, y) => costReqs(x.r) - costReqs(y.r));
+    const p = poolWanted.shift();
+    // If already covered by unlocked specialization PS+, mark unlocked!
+    if (specUnlocked && norm(specUnlocked.psPlus) === norm(p.n)) {
+      unlockedWanted.push(p.s);
+      continue;
+    }
+    const c = costReqs(p.r);
+    if (spentNow() + c <= budget) {
+      applyReqs(p.r);
+      unlockedWanted.push(p.s);
+      unlockedRegular.push(p.s);
+    } else {
+      const needTotal = spentNow() + c;
+      nextMilestones.push({
+        kind: "PlayStyle",
+        name: p.n,
+        slug: p.s,
+        apCost: c,
+        extraAp: needTotal - budget,
+        atLvl: findLevelForAp(needTotal),
+        gaps: p.r.map(([k, t]) => `${SHORT[k] || k} ${effV(k)}→${t}`).join(", ")
+      });
+    }
+  }
+
+  // Now unlock chosen specialization if not yet unlocked
+  if (!specUnlocked && chosenSpec) {
+    const sc = costReqs(chosenSpec.reqs);
+    if (sc < Infinity && spentNow() + sc <= budget) {
+      applyReqs(chosenSpec.reqs);
+      specUnlocked = chosenSpec;
+      // Remove from regular slots if specialization upgraded one of them to PS+
+      for (let i = unlockedRegular.length - 1; i >= 0; i--) {
+        const p = PSB[unlockedRegular[i]];
+        if (p && norm(p.n) === norm(specUnlocked.psPlus)) unlockedRegular.splice(i, 1);
+      }
+    } else if (sc < Infinity) {
+      const needTotal = spentNow() + sc;
+      nextMilestones.push({
+        kind: "Specialization PS+",
+        name: `${chosenSpec.name} (${chosenSpec.psPlus})`,
+        apCost: sc,
+        extraAp: needTotal - budget,
+        atLvl: findLevelForAp(needTotal),
+        gaps: chosenSpec.reqs.map(([k, t]) => `${SHORT[k] || k} ${effV(k)}→${t}`).join(", ")
+      });
+    }
+  }
+
+  const coreAp = spentNow();
+
+  // Fill remaining open regular slots (up to 4) with position best meta PlayStyles if slots are free
+  const bonusRegular = [];
+  const metaList = (DB.positions[pos]?.bestRegularPlayStyles || []).map(n => PSN[norm(n)]).filter(Boolean);
+  for (const mp of metaList) {
+    if (unlockedRegular.length + bonusRegular.length >= 4) break;
+    if (sigIds.includes(mp.s) || unlockedRegular.includes(mp.s) || wantedSlugs.includes(mp.s)) continue;
+    if (specUnlocked && norm(specUnlocked.psPlus) === norm(mp.n)) continue;
+    const mc = costReqs(mp.r);
+    if (mc < Infinity && spentNow() + mc <= budget) {
+      applyReqs(mp.r);
+      bonusRegular.push(mp.s);
+    }
+  }
+
+  // Stars (WF / SM) when budget allows (Lv 42+)
+  let sm = false, wf = false, starAp = 0;
+  if (lvl >= 42 && !isGKArch(a)) {
+    if (a.group in { Forward: 1, Midfielder: 1 } && spentNow() + starAp + a.stars.wfAp <= budget) {
+      wf = true; starAp += a.stars.wfAp;
+    }
+    if (a.group === "Forward" && spentNow() + starAp + a.stars.smAp <= budget) {
+      sm = true; starAp += a.stars.smAp;
+    }
+  }
+
+  // Spend remaining AP into highest-value weighted attributes for position + S2 discounts + breakpoints
+  const W = DB.positions[pos]?.weights || {};
+  const BP_TARGETS = [74, 75, 80, 85, 90, 92];
+  while (true) {
+    let best = null;
+    for (const [k, w] of Object.entries(W)) {
+      if (!A[k] || vals[k] >= A[k].max) continue;
+      const c = ppt(A[k].tier, vals[k] + 1);
+      if (spentNow() + starAp + c > budget) continue;
+      const eNext = effV(k) + 1;
+      const s2Mult = A[k].s2Shift === "cheaper" ? 1.18 : A[k].s2Shift === "dearer" ? 0.9 : 1.0;
+      const bpMult = BP_TARGETS.includes(eNext) ? 1.22 : 1.0;
+      const sc = (w * s2Mult * bpMult) / c;
+      if (!best || sc > best.sc) best = { sc, k };
+    }
+    if (!best) break;
+    vals[best.k]++;
+  }
+
+  const totalSpent = spentNow() + starAp;
+  const bp = blueprint(pos, a);
+  const ag = effV("agility"), st = effV("strength"), ac = effV("acceleration"), h = bp.h;
+  const accType = (ag >= 65 && ag - st >= 15 && ac >= 74 && h <= 180) ? "Explosive" : (st >= 65 && st - ag >= 14 && ac >= 55 && h >= 185) ? "Lengthy" : "Controlled";
+
+  const regSlots = [...unlockedRegular, ...bonusRegular].slice(0, 4);
+  const weightedSum = Object.entries(W).reduce((s, [k, w]) => s + (A[k] ? effV(k) * w : 0), 0);
+  const specMatchesTarget = specUnlocked && specTarget !== "auto" && (specUnlocked.name === specTarget || norm(specUnlocked.psPlus) === norm(specTarget));
+
+  const score =
+    posMatchScore(a, pos) +
+    (archPref === a.id ? 600 : 0) +
+    unlockedWanted.length * 175 +
+    freeSigs.length * 105 +
+    (specUnlocked ? 150 : 0) +
+    (specMatchesTarget ? 210 : 0) -
+    capBlocked.length * 260 -
+    coreAp * 0.11 +
+    weightedSum * 1.4;
+
+  return {
+    a, pos, lvl, budget, totalSpent, coreAp, vals, mast, effV,
+    sm, wf, h: bp.h, w: bp.w, accType,
+    freeSigs, unlockedWanted, unlockedRegular, bonusRegular, regSlots,
+    chosenSpec, specUnlocked, capBlocked, nextMilestones, score
+  };
+}
+
+function solveAllArchetypes() {
+  const list = DB.archetypes.map(a => solveArchetypeBuild(a, AB.pos, AB.lvl, AB.ps, AB.specTarget, AB.archPref));
+  list.sort((x, y) => y.score - x.score);
+  AB.solutions = list.slice(0, 3);
+  if (AB.rankIdx >= AB.solutions.length) AB.rankIdx = 0;
+  return AB.solutions;
+}
+
+function setPlannerMode(pm, scroll) {
+  AB.mode = pm === "manual" ? "manual" : "auto";
+  $$("#pm-bar .mbtn").forEach(b => b.classList.toggle("on", b.dataset.pm === AB.mode));
+  $("#ab-wrap").classList.toggle("hide", AB.mode === "manual");
+  if (scroll) {
+    const target = AB.mode === "manual" ? $("#man-wrap") : $("#v-planner");
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
+function renderAutoBuilder() {
+  // Sync controls
+  $("#ab-pos").innerHTML = POSKEYS.map(k => `<option value="${k}" ${k === AB.pos ? "selected" : ""}>${esc(DB.positions[k].label)}</option>`).join("");
+  $("#ab-lvl").value = AB.lvl;
+  setPct($("#ab-lvl"));
+  const L = DB.levels[AB.lvl - 1];
+  $("#ab-lvl-lbl").textContent = `Lv ${AB.lvl} · ${fmt(L.totalAp)} AP`;
+  $("#ab-arch-pref").innerHTML = `<option value="auto" ${AB.archPref === "auto" ? "selected" : ""}>✨ Auto-Rank All 13 Archetypes</option>` +
+    DB.archetypes.map(a => `<option value="${a.id}" ${a.id === AB.archPref ? "selected" : ""}>Pin ${esc(a.name)} (${esc(a.group)})</option>`).join("");
+
+  // Category chips for PlayStyle picker
+  const cats = ["All", ...new Set(PSL.map(p => p.c))];
+  $("#ab-cat-tabs").innerHTML = cats.map(c => `<button class="chip ${AB.cat === c ? "on" : ""}" data-cat="${esc(c)}" type="button">${esc(c)}</button>`).join("");
+  $("#ab-ps-counter").textContent = `${AB.ps.length} / 4 selected`;
+
+  // PlayStyle picker cards
+  const showGK = AB.pos === "GK" || AB.cat === "Goalkeeper";
+  const psFiltered = PSL.filter(p => (AB.cat === "All" ? (showGK ? true : !p.g) : p.c === AB.cat));
+  $("#ab-ps-picker").innerHTML = psFiltered.map(p => {
+    const on = AB.ps.includes(p.s);
+    const reqTxt = p.r.map(([k, t]) => `${SHORT[k] || k} ${t}`).join(" · ");
+    return `<button class="pspick ${on ? "on" : ""}" data-ps="${p.s}" type="button">
+      <b><span>${esc(p.n)}</span><span>${on ? "✓" : "+"}</span></b>
+      <small>${esc(p.c)} · ${esc(reqTxt)}</small>
+    </button>`;
+  }).join("");
+
+  // Specialization dropdown
+  const uniqueSpecs = [...new Set(SPECS.map(s => s.psPlus))];
+  $("#ab-spec-pick").innerHTML = `<option value="auto" ${AB.specTarget === "auto" ? "selected" : ""}>✨ Auto-Recommend Best Specialization PS+ (92/90/90)</option>` +
+    uniqueSpecs.map(pp => {
+      const archs = SPECS.filter(s => s.psPlus === pp).map(s => `${s.name} (${s.archName})`).join(", ");
+      return `<option value="${esc(pp)}" ${AB.specTarget === pp ? "selected" : ""}>${esc(pp)} — via ${esc(archs)}</option>`;
+    }).join("");
+
+  // Solve Top 3 Archetypes
+  const sols = solveAllArchetypes();
+  const labels = ["🏆 #1 Best Match", "🥈 #2 Runner-Up", "🥉 #3 Alternative"];
+  $("#ab-ranks").innerHTML = sols.map((sol, idx) => {
+    const on = idx === AB.rankIdx;
+    const sigMatches = sol.freeSigs.map(s => PSB[s]?.n).filter(Boolean);
+    return `<div class="rkcard ${on ? "on" : ""}" data-rk="${idx}">
+      <div class="rkhd">
+        <span class="tag ${idx === 0 ? "g" : "c"}">${labels[idx]}</span>
+        <b>${esc(sol.a.name)}</b>
+        <span class="sp"></span>
+        <span class="tag">${fmt(sol.totalSpent)} / ${fmt(sol.budget)} AP</span>
+      </div>
+      <div class="small muted">
+        Wanted PS unlocked: <b style="color:var(--neon)">${sol.unlockedWanted.length}/${AB.ps.length}</b>
+        ${sigMatches.length ? ` · <span class="tag v">FREE Sig PS+: ${sigMatches.map(esc).join(", ")}</span>` : ""}
+      </div>
+      <div class="small dim">
+        Spec: <b>${sol.specUnlocked ? esc(sol.specUnlocked.name + " → " + sol.specUnlocked.psPlus) : "Locked at Lv " + sol.lvl + " (" + esc(sol.chosenSpec.name) + ")"}</b>
+      </div>
+    </div>`;
+  }).join("");
+
+  renderSolutionDetail(sols[AB.rankIdx]);
+}
+
+function renderSolutionDetail(sol) {
+  if (!sol) return;
+  const a = sol.a, L = DB.levels[sol.lvl - 1];
+  const upgraded = Object.entries(a.attributes)
+    .filter(([k, o]) => sol.vals[k] > o.start || (sol.mast[k] || 0) > 0)
+    .sort((x, y) => (sol.effV(y[0]) - sol.effV(x[0])) || ((sol.vals[y[0]] - y[1].start) - (sol.vals[x[0]] - x[1].start)));
+
+  const wantedStatusRows = AB.ps.map(slug => {
+    const p = PSB[slug];
+    if (!p) return "";
+    if (a.sig1.id === slug) return `<li><span class="tag v">FREE SIGNATURE #1</span> <b>${esc(p.n)}</b> — Built-in on ${esc(a.name)} (upgrades to <b>PlayStyle+ at Lv 20</b>, saves 1 Regular slot &amp; 0 AP!)</li>`;
+    if (a.sig2.id === slug) return `<li><span class="tag v">FREE SIGNATURE #2</span> <b>${esc(p.n)}</b> — Built-in on ${esc(a.name)} (active at Lv 1, upgrades to <b>PlayStyle+ at Lv 55</b>, saves 1 Regular slot!)</li>`;
+    if (sol.specUnlocked && norm(sol.specUnlocked.psPlus) === norm(p.n)) return `<li><span class="tag y">SPEC PLAYSTYLE+</span> <b>${esc(p.n)}+</b> — Granted as PlayStyle+ by <b>${esc(sol.specUnlocked.name)}</b> Specialization!</li>`;
+    if (sol.unlockedWanted.includes(slug)) {
+      const reqTxt = p.r.map(([k, t]) => `${AN[k]} ${sol.effV(k)}/${t}`).join(", ");
+      return `<li><span class="tag g">✅ UNLOCKED AT LV ${sol.lvl}</span> <b>${esc(p.n)}</b> — Equipped in Regular Slot (${esc(reqTxt)})</li>`;
+    }
+    if (sol.capBlocked.some(x => x.s === slug)) {
+      return `<li><span class="tag r">✕ CAP BLOCKED</span> <b>${esc(p.n)}</b> — Exceeds ${esc(a.name)} attribute cap (pick #2/#3 archetype if mandatory)</li>`;
+    }
+    const ms = sol.nextMilestones.find(m => m.slug === slug);
+    return `<li><span class="tag y">🔜 NEXT MILESTONE</span> <b>${esc(p.n)}</b> — Needs <b>+${fmt(ms?.extraAp || 0)} AP</b> (${ms?.atLvl ? "unlocks at <b>Lv " + ms.atLvl + "</b>" : "above Lv 55 budget"} · ${esc(ms?.gaps || "")})</li>`;
+  }).join("");
+
+  const bonusRows = sol.bonusRegular.map(slug => {
+    const p = PSB[slug];
+    return p ? `<li><span class="tag c">BONUS META SLOT</span> <b>${esc(p.n)}</b> — Auto-added into open Regular slot for ${esc(sol.pos)}</li>` : "";
+  }).join("");
+
+  const specRow = sol.specUnlocked
+    ? `<div class="ok" style="margin-top:8px">✓ <b>Specialization Unlocked: ${esc(sol.specUnlocked.name)} → ${esc(sol.specUnlocked.psPlus)}</b> (${sol.specUnlocked.reqs.map(([k, t]) => `${SHORT[k]} ${sol.effV(k)}/${t}`).join(" · ")})</div>`
+    : (() => {
+        const sms = sol.nextMilestones.find(m => m.kind.includes("Specialization"));
+        return `<div class="note" style="margin-top:8px">🔜 <b>Target Specialization: ${esc(sol.chosenSpec.name)} (${esc(sol.chosenSpec.psPlus)})</b> — Needs <b>+${fmt(sms?.extraAp || 0)} AP</b> (${sms?.atLvl ? "unlocks by <b>Lv " + sms.atLvl + "</b>" : "lower 1 regular PlayStyle to fit at Lv 55"} · ${esc(sms?.gaps || "")})</div>`;
+      })();
+
+  $("#ab-solution").innerHTML = `
+   <div class="solgrid">
+    <div class="solbox">
+     <h3>1 · 📸 Build Snapshot (${esc(a.name)} · ${esc(sol.pos)})</h3>
+     <div class="kpis" style="margin-bottom:8px">
+      <div class="kpi"><small>Archetype</small><b>${esc(a.name)}</b></div>
+      <div class="kpi"><small>Level / Card</small><b>Lv ${sol.lvl} · ${esc(L.cardTier)}</b></div>
+      <div class="kpi"><small>AP Spent</small><b>${fmt(sol.totalSpent)} / ${fmt(sol.budget)}</b></div>
+      <div class="kpi"><small>AcceleRATE</small><b>${esc(sol.accType)}</b></div>
+     </div>
+     <div class="small muted">
+      <b>Height / Weight:</b> ${sol.h} cm (${cm2ft(sol.h)}) · ${sol.w} kg (${Math.round(sol.w * 2.20462)} lbs)<br>
+      <b>Built-in Signatures:</b> <span class="tag v">${esc(a.sig1.name)} (Lv 20 PS+)</span> <span class="tag v">${esc(a.sig2.name)} (Lv 55 PS+)</span><br>
+      <b>Stars:</b> Skill Moves ${sol.sm ? a.stars.smMax : a.stars.smStart}★ · Weak Foot ${sol.wf ? a.stars.wfMax : a.stars.wfStart}★ · <b>S2 Discounted:</b> ${a.s2Cheaper.length ? a.s2Cheaper.map(esc).join(", ") : "None"}
+     </div>
+     ${specRow}
+    </div>
+
+    <div class="solbox">
+     <h3>2 · 🎯 Your Wanted PlayStyles &amp; Milestones</h3>
+     <ul class="small" style="margin:0;padding-left:18px;display:grid;gap:6px">
+      ${wantedStatusRows || "<li class='muted'>Tap any PlayStyles above to add them to your target list.</li>"}
+      ${bonusRows}
+     </ul>
+     <div class="small dim" style="margin-top:8px">
+      <b>Regular Slots to Equip (${L.regularSlots} open at Lv ${sol.lvl}):</b>
+      ${sol.regSlots.slice(0, L.regularSlots).map((s, i) => `<span class="tag g">#${i + 1} ${esc(PSB[s]?.n || s)}</span>`).join(" ") || "None"}
+     </div>
+    </div>
+   </div>
+
+   <div class="solbox" style="margin-top:10px">
+    <h3>3 · ⚡ Exact Attribute Values to Set on Your TV (${upgraded.length} upgraded stats)</h3>
+    <div class="statpills">
+     ${upgraded.map(([k, o]) => {
+       const e = sol.effV(k), delta = sol.vals[k] - o.start, mb = sol.mast[k] || 0;
+       return `<div class="statpill"><span>${esc(AN[k])}${o.s2Shift === "cheaper" ? ' <small style="color:var(--neon)">▼S2</small>' : ""}</span><b><span class="${vcls(e)}">${e}</span><i>+${delta}${mb ? ` (+${mb}M)` : ""}</i></b></div>`;
+     }).join("")}
+    </div>
+    <div class="row" style="margin-top:12px">
+     <button class="btn p" id="ab-apply-bottom" type="button">🚀 Apply to Full Build Planner &amp; Sliders</button>
+     <button class="btn s" id="ab-apply-jump" type="button">🎛️ Apply &amp; Open Manual Sliders</button>
+     <button class="btn s" id="ab-share-sol" type="button">🔗 Copy Shareable Build Link</button>
+    </div>
+   </div>`;
+}
+
+function applyAutoBuildSolution(switchToManual) {
+  const sol = AB.solutions[AB.rankIdx];
+  if (!sol) return;
+  const st = fresh(sol.a.id);
+  Object.assign(st, {
+    pos: sol.pos,
+    lvl: sol.lvl,
+    h: sol.h,
+    w: sol.w,
+    sm: sol.sm,
+    wf: sol.wf,
+    mast: S ? S.mast : true,
+    ps: sol.regSlots.slice(0, 4),
+    preset: null
+  });
+  for (const k of Object.keys(st.vals)) st.vals[k] = sol.vals[k];
+  S = st;
+  renderPlanner(true);
+  if (switchToManual) setPlannerMode("manual", true);
+  toast(`Loaded ${sol.a.name} (${sol.pos} · Lv ${sol.lvl}) into Planner!`);
+}
+
+function buildAutoPlanText() {
+  const sol = AB.solutions[AB.rankIdx];
+  if (!sol) return "";
+  const a = sol.a;
+  const up = Object.entries(a.attributes)
+    .filter(([k, o]) => sol.vals[k] > o.start)
+    .map(([k, o]) => `${SHORT[k]} ${sol.effV(k)} (+${sol.vals[k] - o.start})`)
+    .join(" · ");
+  return [
+    `FC 27 CLUBS LAB // AUTO-BUILDER ACTION PLAN`,
+    `Recommended: ${a.name} (${a.group}) · ${sol.pos} · Lv ${sol.lvl} (${fmt(sol.totalSpent)}/${fmt(sol.budget)} AP)`,
+    `Physical: ${sol.h}cm (${cm2ft(sol.h)}) · ${sol.w}kg · AcceleRATE ${sol.accType}`,
+    `Free Signatures: ${a.sig1.name} (Lv20 PS+) + ${a.sig2.name} (Lv55 PS+)`,
+    `Specialization: ${sol.specUnlocked ? sol.specUnlocked.name + " -> " + sol.specUnlocked.psPlus : sol.chosenSpec.name + " (next milestone)"}`,
+    `Regular Slots: ${sol.regSlots.map(s => PSB[s]?.n).filter(Boolean).join(", ")}`,
+    `Stats to Set: ${up}`,
+    shareURL()
+  ].join("\n");
+}
+
+/* ----- Photo Scanner (Canvas + Heuristic + Optional CDN Tesseract OCR) ----- */
+function parseBuildText(rawText) {
+  const txt = String(rawText || "");
+  const low = txt.toLowerCase();
+  const out = { arch: null, pos: null, lvl: null, ps: [], stats: {} };
+
+  for (const a of DB.archetypes) {
+    if (low.includes(a.name.toLowerCase())) { out.arch = a.id; break; }
+  }
+  const posOrder = [
+    ["LW/RW", /\b(lw|rw|lm|rm|winger)\b/i],
+    ["LB/RB", /\b(lb|rb|lwb|rwb|fullback)\b/i],
+    ["CDM", /\bcdm\b/i],
+    ["CAM", /\bcam\b/i],
+    ["CM", /\bcm\b/i],
+    ["CB", /\bcb\b/i],
+    ["GK", /\b(gk|goalkeeper)\b/i],
+    ["ST", /\b(st|striker|cf)\b/i]
+  ];
+  for (const [pk, rx] of posOrder) {
+    if (rx.test(txt)) { out.pos = pk; break; }
+  }
+  const lvMatch = txt.match(/\b(?:lv|lvl|level)\s*[:.]?\s*([1-5]?\d)\b/i);
+  if (lvMatch) {
+    const n = +lvMatch[1];
+    if (n >= 1 && n <= 55) out.lvl = n;
+  }
+  for (const p of PSL) {
+    if (low.includes(p.n.toLowerCase())) out.ps.push(p.s);
+  }
+  for (const [k, label] of Object.entries(AN)) {
+    const escLbl = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const m = txt.match(new RegExp(escLbl + "\\s*[:.-]?\\s*([6-9]\\d)", "i"));
+    if (m) out.stats[k] = +m[1];
+  }
+  return out;
+}
+
+function renderPhotoPreview(metaNote) {
+  if (!AB.photoUrl) {
+    $("#ab-preview-box").innerHTML = "";
+    return;
+  }
+  $("#ab-preview-box").innerHTML = `
+   <div class="row" style="margin-bottom:6px">
+    <span class="tag g">📸 Photo Loaded</span>
+    <span class="small muted">${esc(AB.photoName)}</span>
+    <span class="sp"></span>
+    <button class="btn s" data-zoom="1" type="button">1x</button>
+    <button class="btn s" data-zoom="1.5" type="button">1.5x</button>
+    <button class="btn s" data-zoom="2" type="button">2x</button>
+    <button class="btn s" id="ab-clear-photo" type="button">✕ Remove</button>
+   </div>
+   <div class="ab-imgwrap"><img id="ab-img-el" src="${AB.photoUrl}" alt="Uploaded build screenshot" style="transform:scale(${AB.zoom})"></div>
+   <div class="small muted" style="margin-top:6px" id="ab-photo-meta">${esc(metaNote || AB.detectedNote)}</div>`;
+}
+
+async function handlePhotoUpload(file, syntheticText) {
+  if (!file) return;
+  AB.photoName = file.name || "build-photo.png";
+  AB.zoom = 1;
+  const url = URL.createObjectURL(file);
+  AB.photoUrl = url;
+  $("#ab-scan-status").textContent = "Scanning photo...";
+  renderPhotoPreview("Analyzing TV screen image & checking text markers...");
+
+  // Load into image + offscreen canvas to inspect resolution/colors
+  const img = new Image();
+  img.src = url;
+  await new Promise(res => { img.onload = res; img.onerror = res; });
+
+  const c = document.createElement("canvas");
+  const w = Math.min(960, img.naturalWidth || 640);
+  const h = Math.round(w * ((img.naturalHeight || 360) / (img.naturalWidth || 640)));
+  c.width = w; c.height = h;
+  const ctx = c.getContext("2d");
+  ctx.drawImage(img, 0, 0, w, h);
+
+  // Extract initial hints from filename or synthetic demo text
+  let combinedText = `${file.name || ""} ${syntheticText || ""}`;
+
+  // Optional online Tesseract OCR with fast timeout & graceful offline fallback
+  if (!syntheticText && navigator.onLine && /^https?:/.test(location.protocol)) {
+    try {
+      if (!window.Tesseract) {
+        await Promise.race([
+          new Promise((res, rej) => {
+            const sc = document.createElement("script");
+            sc.src = "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js";
+            sc.onload = res; sc.onerror = rej;
+            document.head.appendChild(sc);
+          }),
+          new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 3500))
+        ]);
+      }
+      if (window.Tesseract) {
+        const r = await Promise.race([
+          window.Tesseract.recognize(c, "eng"),
+          new Promise((_, rej) => setTimeout(() => rej(new Error("ocr-timeout")), 6500))
+        ]);
+        if (r?.data?.text) combinedText += "\n" + r.data.text;
+      }
+    } catch (_) {
+      // Offline or CDN blocked — fall back cleanly to Quick-Confirm Bar
+    }
+  }
+
+  const parsed = parseBuildText(combinedText);
+  const foundParts = [];
+  if (parsed.pos) { AB.pos = parsed.pos; foundParts.push(`Pos: ${parsed.pos}`); }
+  if (parsed.lvl) { AB.lvl = parsed.lvl; foundParts.push(`Level: ${parsed.lvl}`); }
+  if (parsed.arch) { AB.archPref = parsed.arch; foundParts.push(`Archetype: ${ARCH[parsed.arch].name}`); }
+  if (parsed.ps.length) { AB.ps = parsed.ps.slice(0, 4); foundParts.push(`PlayStyles: ${AB.ps.map(s => PSB[s]?.n).join(", ")}`); }
+
+  AB.detectedNote = foundParts.length
+    ? `Detected from photo: ${foundParts.join(" · ")}. Verify or tweak in the Quick-Confirm Bar below!`
+    : `Photo preview ready (${img.naturalWidth || w}×${img.naturalHeight || h}px). Confirm your Level, Position & Archetype in the Quick-Confirm Bar right below while looking at your photo!`;
+  $("#ab-scan-status").textContent = foundParts.length ? "Photo scanned ✓" : "Preview ready · Quick-Confirm below";
+  $("#ab-detect-note").textContent = foundParts.length ? `✓ Auto-filled from photo (${foundParts.join(" · ")})` : "(tap below while viewing your photo)";
+  renderPhotoPreview(AB.detectedNote);
+  renderAutoBuilder();
+  toast(foundParts.length ? "Photo scanned & Auto-Builder updated!" : "Photo loaded! Confirm Level & Position below.");
+}
+
+function loadDemoTVPhoto() {
+  const c = document.createElement("canvas");
+  c.width = 880; c.height = 460;
+  const g = c.getContext("2d");
+  const grad = g.createLinearGradient(0, 0, 880, 460);
+  grad.addColorStop(0, "#07101E"); grad.addColorStop(1, "#0E1E34");
+  g.fillStyle = grad; g.fillRect(0, 0, 880, 460);
+  g.strokeStyle = "#00FF87"; g.lineWidth = 3; g.strokeRect(18, 18, 844, 424);
+  g.fillStyle = "#00FF87"; g.font = "900 26px system-ui, sans-serif";
+  g.fillText("EA SPORTS FC 27 // PRO CLUBS TV SCREENSHOT", 40, 58);
+  g.fillStyle = "#E9F1FF"; g.font = "800 22px system-ui, sans-serif";
+  g.fillText("ARCHETYPE: FINISHER   ·   POSITION: ST   ·   LEVEL 28 (608 AP)", 40, 98);
+  g.fillStyle = "#FFC94A"; g.font = "700 18px system-ui, sans-serif";
+  g.fillText("WANTED PLAYSTYLES: Finesse Shot · Quick Step · Rapid · Technical", 40, 134);
+  const boxes = [
+    ["Acceleration", "86"], ["Sprint Speed", "85"], ["Finishing", "88"], ["Shot Power", "82"],
+    ["Agility", "84"], ["Dribbling", "85"], ["Ball Control", "84"], ["Composure", "82"]
+  ];
+  boxes.forEach(([k, v], i) => {
+    const x = 40 + (i % 4) * 202, y = 165 + Math.floor(i / 4) * 115;
+    g.fillStyle = "#111C2D"; g.fillRect(x, y, 186, 95);
+    g.strokeStyle = "#2A3B58"; g.lineWidth = 2; g.strokeRect(x, y, 186, 95);
+    g.fillStyle = "#9AABC6"; g.font = "700 14px system-ui, sans-serif"; g.fillText(k.toUpperCase(), x + 14, y + 30);
+    g.fillStyle = "#00FF87"; g.font = "900 34px system-ui, sans-serif"; g.fillText(v, x + 14, y + 74);
+  });
+  g.fillStyle = "#9AABC6"; g.font = "600 14px system-ui, sans-serif";
+  g.fillText("Demo TV Capture — Detected Lv 28 Finisher ST -> Auto-Builder solves current unlocks + next milestones", 40, 418);
+  c.toBlob(blob => {
+    if (!blob) return;
+    const f = new File([blob], "ps5-tv-finisher-st-lv28.png", { type: "image/png" });
+    handlePhotoUpload(f, "Finisher ST Level 28 Finesse Shot Quick Step Rapid Technical Finishing 88 Acceleration 86 Sprint Speed 85 Dribbling 85");
+  }, "image/png");
+}
+
+function bindAutoBuilder() {
+  $("#top-autobuild").addEventListener("click", () => {
+    show("planner");
+    setPlannerMode("auto", true);
+    history.replaceState(null, "", "#tab=planner&pm=auto");
+  });
+  $("#pm-bar").addEventListener("click", e => {
+    const b = e.target.closest(".mbtn");
+    if (b) setPlannerMode(b.dataset.pm, false);
+  });
+  $("#ab-pos").addEventListener("change", e => {
+    AB.pos = e.target.value;
+    AB.rankIdx = 0;
+    renderAutoBuilder();
+  });
+  $("#ab-lvl").addEventListener("input", e => {
+    AB.lvl = +e.target.value;
+    renderAutoBuilder();
+  });
+  $("#ab-arch-pref").addEventListener("change", e => {
+    AB.archPref = e.target.value;
+    AB.rankIdx = 0;
+    renderAutoBuilder();
+  });
+  $("#ab-spec-pick").addEventListener("change", e => {
+    AB.specTarget = e.target.value;
+    AB.rankIdx = 0;
+    renderAutoBuilder();
+  });
+  $("#ab-cat-tabs").addEventListener("click", e => {
+    const c = e.target.closest(".chip");
+    if (c) { AB.cat = c.dataset.cat; renderAutoBuilder(); }
+  });
+  $("#ab-ps-picker").addEventListener("click", e => {
+    const b = e.target.closest(".pspick");
+    if (!b) return;
+    const slug = b.dataset.ps;
+    const idx = AB.ps.indexOf(slug);
+    if (idx >= 0) {
+      AB.ps.splice(idx, 1);
+    } else {
+      if (AB.ps.length >= 4) {
+        AB.ps.shift();
+        toast("Swapped oldest PlayStyle (max 4 target Regular PlayStyles)");
+      }
+      AB.ps.push(slug);
+    }
+    AB.rankIdx = 0;
+    renderAutoBuilder();
+  });
+  $("#ab-meta-fill").addEventListener("click", () => {
+    AB.ps = metaPsForPos(AB.pos);
+    AB.rankIdx = 0;
+    renderAutoBuilder();
+    toast(`Selected top 4 meta PlayStyles for ${AB.pos}`);
+  });
+  $("#ab-ps-clear").addEventListener("click", () => {
+    AB.ps = [];
+    renderAutoBuilder();
+  });
+  $("#ab-ranks").addEventListener("click", e => {
+    const card = e.target.closest(".rkcard");
+    if (card) {
+      AB.rankIdx = +card.dataset.rk;
+      renderAutoBuilder();
+    }
+  });
+  $("#ab-wrap").addEventListener("click", e => {
+    if (e.target.id === "ab-apply-top" || e.target.id === "ab-apply-bottom") {
+      applyAutoBuildSolution(false);
+    } else if (e.target.id === "ab-apply-jump") {
+      applyAutoBuildSolution(true);
+    } else if (e.target.id === "ab-copy-plan") {
+      copy(buildAutoPlanText(), "Auto-Build Action Plan copied!");
+    } else if (e.target.id === "ab-share-sol") {
+      applyAutoBuildSolution(false);
+      copy(shareURL(), "Shareable build link copied!");
+    } else if (e.target.id === "ab-clear-photo") {
+      AB.photoUrl = null;
+      renderPhotoPreview();
+    } else if (e.target.dataset?.zoom) {
+      AB.zoom = +e.target.dataset.zoom;
+      const img = $("#ab-img-el");
+      if (img) img.style.transform = `scale(${AB.zoom})`;
+    }
+  });
+  $("#ab-file").addEventListener("change", e => {
+    if (e.target.files?.[0]) handlePhotoUpload(e.target.files[0]);
+  });
+  $("#ab-file-cam").addEventListener("change", e => {
+    if (e.target.files?.[0]) handlePhotoUpload(e.target.files[0]);
+  });
+  $("#ab-demo-photo").addEventListener("click", loadDemoTVPhoto);
+  $("#ab-grok-btn").addEventListener("click", () => {
+    const sol = AB.solutions[AB.rankIdx];
+    const prompt = `Here is my EA Sports FC 27 Pro Clubs build photo (Position: ${AB.pos}, Current Level: Lv ${AB.lvl} / ${fmt(DB.levels[AB.lvl - 1].totalAp)} AP, Archetype: ${sol ? sol.a.name : "auto"}, Wanted PlayStyles: ${AB.ps.map(s => PSB[s]?.n).join(", ") || "best meta"}). Please scan my photo and give me the exact Season 2 AP moves, PlayStyle unlocks, and Specialization plan!`;
+    copy(prompt, "Copied FC 27 Bot photo prompt! Paste in Grok chat with your photo.");
+    $("#ab-ocr-msg").textContent = "✓ Prompt copied — attach your photo in Grok chat for full AI Vision reading!";
+  });
+}
+
 /* ===== ARCHETYPE MATRIX ===== */
 const MX = { g: "All" };
 function renderMatrix() {
@@ -825,10 +1638,10 @@ function boot() {
   if (!st) { try { const c = localStorage.getItem("fc27lab.build"); if (c) st = decode(c); } catch (e) { } }
   S = st || fresh("finisher");
   if (!st) { const i = PRESETS.findIndex(p => p.a === "finisher"); if (i >= 0) { applyPreset(i, true); } }
-  bindPlanner(); bindExplorer(); bindEvos(); bindTactics();
+  bindPlanner(); bindAutoBuilder(); bindExplorer(); bindEvos(); bindTactics();
   $("#mxf").addEventListener("click", e => { const c = e.target.closest(".chip"); if (c) { MX.g = c.dataset.g; renderMatrix(); } });
   $("#mx").addEventListener("click", e => { const b = e.target.closest("[data-preset]"); if (b) { applyPreset(+b.dataset.preset); show("planner"); } });
-  renderPlanner(true); renderMatrix(); renderExplorer(true); renderEvos(); renderTactics();
+  renderPlanner(true); renderAutoBuilder(); renderMatrix(); renderExplorer(true); renderEvos(); renderTactics();
   $("#k-db").textContent = DB.version; $("#k-db2").textContent = `${DB.archetypes.length} archetypes · ${PSL.length} PlayStyles · ${SPECS.length} Specializations · ${META.evolutions.length} Evolutions · ${META.tactics.length} tactics`;
   window.addEventListener("hashchange", route); route();
   const setOff = () => { $("#net").textContent = navigator.onLine ? "Offline-ready" : "Offline mode"; }; setOff(); addEventListener("online", setOff); addEventListener("offline", setOff);
